@@ -112,8 +112,9 @@ pub fn mission_completion_reward_system(
             }
         }
     }
-}/// 
-System for applying facility effects
+}
+
+// System for applying facility effects
 pub fn facility_effects_system(
     mut guild_query: Query<(&mut Guild, &GuildProgression)>,
 ) {
@@ -316,7 +317,7 @@ pub fn resource_production_system(
             guild.resources.insert(crate::guild::guild_core::GuildResource::MagicEssence, new_essence);
         }
     }
-}/
+}
 // Plugin for guild progression systems
 pub struct GuildProgressionPlugin;
 

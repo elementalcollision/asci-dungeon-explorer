@@ -473,7 +473,6 @@ impl AsyncExplorationManager {
             false
         }
     }
-}
 
 impl AsyncExpedition {
     /// Get expedition status summary
