@@ -371,7 +371,7 @@ impl UIFeedbackSystem {
                 let hash = hasher.finish();
                 
                 shake.offset_x = (((hash % 100) as f32 - 50.0) * intensity * 0.1) as i32;
-                shake.offset_y = (((hash >> 8) % 100) as f32 - 50.0) * intensity * 0.1) as i32;
+                shake.offset_y = ((((hash >> 8) % 100) as f32 - 50.0) * intensity * 0.1) as i32;
             }
         }
 

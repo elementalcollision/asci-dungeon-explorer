@@ -38,8 +38,8 @@ impl Default for GuildProgression {
         }
     }
 }
-//
-/ Guild milestone
+
+// Guild milestone
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct GuildMilestone {
     pub id: String,

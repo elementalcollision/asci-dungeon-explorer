@@ -96,8 +96,9 @@ pub fn guild_progression_ui_input_system(
     if keyboard_input.just_pressed(KeyCode::Escape) {
         ui_actions.send(UIAction::Custom(Box::new(GuildProgressionUIAction::SetState(GuildProgressionUIState::Hidden))));
     }
-}/// 
-System for handling guild progression UI actions
+}
+
+// System for handling guild progression UI actions
 pub fn guild_progression_ui_action_system(
     mut progression_ui: ResMut<GuildProgressionUI>,
     mut guild_manager: ResMut<GuildManager>,
@@ -227,7 +228,7 @@ pub fn guild_progression_ui_render_system(
         text: format!("[U] Close | [↑/↓] Scroll"),
         color: None,
     }));
-}/
+}
 // Render overview screen
 fn render_overview_screen(
     progression_ui: &GuildProgressionUI,
@@ -487,8 +488,8 @@ fn render_upgrades_screen(
             }));
         }
     }
-}//
-/ Render facilities screen
+}
+// Render facilities screen
 fn render_facilities_screen(
     progression_ui: &GuildProgressionUI,
     selected_guild: Option<&Guild>,
