@@ -1,0 +1,24 @@
+pub mod ai_component;
+pub mod behavior_system;
+pub mod pathfinding;
+pub mod ai_movement_system;
+pub mod behavior_patterns;
+pub mod enemy_spawner;
+pub mod perception_system;
+pub mod perception_integration;
+pub mod special_enemies;
+pub mod state_indicators;
+pub mod reaction_system;
+pub mod tests;
+
+pub use ai_component::*;
+pub use behavior_system::*;
+pub use pathfinding::*;
+pub use ai_movement_system::*;
+pub use behavior_patterns::*;
+pub use enemy_spawner::*;
+pub use perception_system::*;
+pub use perception_integration::*;
+pub use special_enemies::*;
+pub use state_indicators::*;
+pub use reaction_system::*;

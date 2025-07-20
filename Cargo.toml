@@ -1,0 +1,53 @@
+[package]
+name = "ascii-dungeon-explorer"
+version = "0.1.0"
+edition = "2021"
+authors = ["ASCII Dungeon Explorer Team"]
+description = "An ASCII-based roguelike game with procedurally generated dungeons"
+
+[dependencies]
+# ECS (Entity Component System)
+specs = { version = "0.18", features = ["serde"] }
+specs-derive = "0.4"
+
+# Terminal handling
+crossterm = "0.26"
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+ron = "0.8"
+
+# Random number generation
+rand = "0.8"
+rand_chacha = "0.3"
+
+# Pathfinding
+pathfinding = "4.3"
+
+# Utility
+bracket-noise = "0.8"  # Noise generation for procedural content
+bracket-pathfinding = "0.8"  # Additional pathfinding algorithms
+bracket-random = "0.8"  # Additional RNG utilities
+thiserror = "1.0"  # Error handling
+log = "0.4"  # Logging
+simplelog = "0.12"  # Simple logger implementation
+lazy_static = "1.4"  # Lazy static initialization
+regex = "1.10"  # Regular expressions for text processing
+num_cpus = "1.0"  # CPU core detection for performance monitoring
+
+# Optional llama.cpp integration
+llama_cpp_rs = { version = "0.2", optional = true }
+
+[features]
+default = []
+language_model = ["llama_cpp_rs"]
+
+[profile.dev]
+opt-level = 1  # Basic optimizations for development
+
+[profile.release]
+opt-level = 3  # Full optimizations for release
+lto = true     # Link-time optimization
+codegen-units = 1  # Optimize for size
+panic = "abort"  # Remove panic unwinding code in release
